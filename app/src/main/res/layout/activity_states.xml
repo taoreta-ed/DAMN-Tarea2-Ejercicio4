@@ -2,22 +2,25 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/statesRootLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/earth"
     tools:context=".StatesActivity">
 
     <TextView
         android:id="@+id/textCountry"
-        android:layout_width="wrap_content"
+        style="@style/TitleTextView"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="Estados de ..."
-        android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/buttonState1"
+        style="@style/WhiteButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Estado 1"
@@ -27,10 +30,21 @@
         app:layout_constraintTop_toBottomOf="@+id/textCountry"
         app:layout_constraintVertical_chainStyle="packed" />
 
-    <!-- Agrega más botones para otros estados -->
+    <Button
+        android:id="@+id/buttonState2"
+        style="@style/WhiteButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Estado 2"
+        app:layout_constraintBottom_toTopOf="@+id/buttonAddPoint"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonState1" />
 
     <Button
         android:id="@+id/buttonAddPoint"
+        style="@style/BlackButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
@@ -38,10 +52,11 @@
         app:layout_constraintBottom_toTopOf="@+id/buttonShowPoints"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/buttonState1" />
+        app:layout_constraintTop_toBottomOf="@+id/buttonState2" />
 
     <Button
         android:id="@+id/buttonShowPoints"
+        style="@style/BlackButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
@@ -50,5 +65,15 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/buttonAddPoint" />
+
+    <Button
+        android:id="@+id/buttonBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:text="Atrás"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
